@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>E's Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    nav {
+      background: #34495e;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .skills .bar {
+      margin: 10px 0;
+    }
+    .bar span {
+      display: block;
+      font-weight: bold;
+    }
+    .bar div {
+      background: #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 20px;
+      background: #27ae60;
+      width: 0;
+      transition: width 1s ease-in-out;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      background: #2980b9;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #2c3e50;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+ <header>
+  <h1>Hello, I'm E</h1>
+  <p>A passionate developer and lifelong learner</p>
+  <img src="profile.jpg" alt="E's Photo" style="width:150px; height:150px; border-radius:50%; margin-top:20px; box-shadow: 0 0 10px rgba(0,0,0,0.2);" />
+</header>
+
+  <nav>
+    <a href="index.html">About</a>
+    <a href="index.html">Skills</a>
+    <a href="index.html">Projects</a>
+    <a href="index.html">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a methodical learner with a strong foundation in programming, algorithms, and logic. I love solving problems and building clean, efficient solutions. Currently exploring quantitative aptitude and preparing for driving theory tests.</p>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <div class="bar">
+      <span>Java</span>
+      <div><div class="bar-fill" style="width: 90%"></div></div>
+    </div>
+    <div class="bar">
+      <span>Python</span>
+      <div><div class="bar-fill" style="width: 85%"></div></div>
+    </div>
+    <div class="bar">
+      <span>Algorithms</span>
+      <div><div class="bar-fill" style="width: 80%"></div></div>
+    </div>
+    <div class="bar">
+      <span>Image Editing</span>
+      <div><div class="bar-fill" style="width: 60%"></div></div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="card">
+      <h3>Code Challenge Solver</h3>
+      <p>Built in Java and Python, this tool handles edge cases and validates dynamic inputs for algorithmic problems.</p>
+    </div>
+    <div class="card">
+      <h3>Driving Theory Prep</h3>
+      <p>A rule-based quiz system with manual calculations and visual cues for road safety learning.</p>
+    </div>
+    <div class="card">
+      <h3>Image Enhancer</h3>
+      <p>Basic image editing tool to adjust text colors and improve clarity for visual design tasks.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="submitForm(event)">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 E's Portfolio. Made with ❤️ in Hasanparthy.</p>
+  </footer>
+
+  <script>
+    function submitForm(e) {
+      e.preventDefault();
+      alert("Thanks for reaching out! I'll get back to you soon.");
+    }
+
+    window.addEventListener('load', () => {
+      document.querySelectorAll('.bar-fill').forEach(bar => {
+        bar.style.width = bar.style.width;
+      });
+    });
+  </script>
+
+</body>
+</html>
